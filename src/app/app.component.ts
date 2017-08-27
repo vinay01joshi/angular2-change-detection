@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'Change Detection';
+  movies = [
+    {title: 'Movie 1'},
+    {title: 'Movie 2'},
+    {title: 'Movie 3'},
+    {title: 'Movie 4'},
+  ];
 }
