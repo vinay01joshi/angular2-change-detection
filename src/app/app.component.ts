@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, DoCheck } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements DoCheck {
   title = 'Change Detection';
   movies = [
     {title: 'Movie 1'},
@@ -13,4 +13,10 @@ export class AppComponent {
     {title: 'Movie 3'},
     {title: 'Movie 4'},
   ];
+
+  ngDoCheck() {
+    console.log("AppComponent-DoCheck");
+  }
+
+  onClick(){}
 }

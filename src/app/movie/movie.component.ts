@@ -1,10 +1,14 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, DoCheck } from '@angular/core';
 
 @Component({
   selector: 'movie',
   templateUrl: './movie.component.html',
   styleUrls: ['./movie.component.css']
 })
-export class MovieComponent {
+export class MovieComponent implements DoCheck {
   @Input() movie;
+
+  ngDoCheck(){
+    console.log('MovieComponent-DoCheck');
+  }
 }
