@@ -19,6 +19,6 @@ export class AppComponent implements DoCheck {
   }
 
   onClick(){
-    this.movies[0].title = "TITLE UPDATED";
+    this.movies[0] = {title: 'UPDATED'};
   }
 }
